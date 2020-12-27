@@ -23,7 +23,7 @@ export const fetchData = async (country) => {
 export const fetchDailyData = async () => {
   try {
     const { data } = await axios.get(`https://corona.lmao.ninja/v2/historical/all`);
-    console.log(data.cases[1])
+    console.log(data.cases)
     return data.map(({ cases, deaths, reportDate: date }) => ({
       confirmed: cases.value,
       deaths: deaths.total,
